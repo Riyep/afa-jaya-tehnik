@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e"/>
+      <stop offset="50%" stop-color="#0e7490"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg4)"/>
+
+  <!-- Living Room Interior with clean AC Installation -->
+  <!-- Wall frame -->
+  <rect x="250" y="100" width="300" height="90" rx="8" fill="#ffffff" stroke="#bae6fd" stroke-width="3"/>
+  <rect x="270" y="165" width="260" height="12" rx="3" fill="#0f172a"/>
+  
+  <!-- Checkmark shield for guaranteed neatness -->
+  <circle cx="400" cy="330" r="80" fill="#ffffff" fill-opacity="0.2"/>
+  <circle cx="400" cy="330" r="65" fill="#10b981"/>
+  <path d="M 365 330 L 390 355 L 440 300" fill="none" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Stars -->
+  <g fill="#facc15">
+    <!-- 5 stars -->
+    <polygon points="310,430 315,445 330,445 318,454 322,468 310,459 298,468 302,454 290,445 305,445"/>
+    <polygon points="355,430 360,445 375,445 363,454 367,468 355,459 343,468 347,454 335,445 350,445"/>
+    <polygon points="400,430 405,445 420,445 408,454 412,468 400,459 388,468 392,454 380,445 395,445"/>
+    <polygon points="445,430 450,445 465,445 453,454 457,468 445,459 433,468 437,454 425,445 440,445"/>
+    <polygon points="490,430 495,445 510,445 498,454 502,468 490,459 478,468 482,454 470,445 485,445"/>
+  </g>
+
+  <!-- Badge -->
+  <rect x="220" y="500" width="360" height="50" rx="25" fill="#ffffff" fill-opacity="0.95"/>
+  <text x="400" y="532" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#0f766e" font-weight="bold">Hasil Rapi, Dingin &amp; Bergaransi</text>
+</svg>

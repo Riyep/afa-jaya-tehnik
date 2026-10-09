@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg2)"/>
+  
+  <!-- Water bubbles / clean splashes -->
+  <circle cx="150" cy="180" r="40" fill="#ffffff" fill-opacity="0.15"/>
+  <circle cx="680" cy="220" r="55" fill="#ffffff" fill-opacity="0.1"/>
+  <circle cx="220" cy="460" r="30" fill="#ffffff" fill-opacity="0.12"/>
+  <circle cx="640" cy="440" r="45" fill="#ffffff" fill-opacity="0.15"/>
+
+  <!-- High-pressure washing spray illustration -->
+  <rect x="220" y="160" width="360" height="180" rx="12" fill="#f8fafc" stroke="#38bdf8" stroke-width="4"/>
+  <!-- Evaporator coils -->
+  <g stroke="#94a3b8" stroke-width="3">
+    <line x1="250" y1="190" x2="550" y2="190"/>
+    <line x1="250" y1="210" x2="550" y2="210"/>
+    <line x1="250" y1="230" x2="550" y2="230"/>
+    <line x1="250" y1="250" x2="550" y2="250"/>
+    <line x1="250" y1="270" x2="550" y2="270"/>
+    <line x1="250" y1="290" x2="550" y2="290"/>
+    <line x1="250" y1="310" x2="550" y2="310"/>
+  </g>
+  <!-- Water spray cone -->
+  <polygon points="120,380 320,240 330,280" fill="#38bdf8" fill-opacity="0.5"/>
+  <circle cx="120" cy="380" r="14" fill="#0284c7" stroke="#ffffff" stroke-width="3"/>
+  <line x1="80" y1="420" x2="120" y2="380" stroke="#0284c7" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- Sparkles -->
+  <g fill="#fef08a">
+    <polygon points="520,150 525,160 535,165 525,170 520,180 515,170 505,165 515,160"/>
+    <polygon points="260,130 264,138 272,142 264,146 260,154 256,146 248,142 256,138"/>
+  </g>
+
+  <!-- Badge -->
+  <rect x="230" y="500" width="340" height="50" rx="25" fill="#ffffff" fill-opacity="0.95"/>
+  <text x="400" y="532" text-anchor="middle" font-family="sans-serif" font-size="18" fill="#0c4a6e" font-weight="bold">Cuci AC Bersih &amp; Detail</text>
+</svg>
