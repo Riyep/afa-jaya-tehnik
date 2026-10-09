@@ -37,6 +37,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    const element = document.getElementById(targetId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  };
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -48,7 +59,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <a href="#beranda" className="flex items-center gap-2 group cursor-pointer">
+          <a
+            href="#beranda"
+            onClick={(e) => handleNavClick(e, "beranda")}
+            className="flex items-center gap-2 group cursor-pointer"
+          >
             <div
               className={`p-2 rounded-lg transition-colors duration-300 ${
                 scrolled ? "bg-primary-600" : "bg-white/20"
@@ -77,6 +92,7 @@ export default function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
+                onClick={(e) => handleNavClick(e, link.href.replace("#", ""))}
                 className={`px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 cursor-pointer ${
                   activeSection === link.href.replace("#", "")
                     ? scrolled
@@ -126,7 +142,10 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                handleNavClick(e, link.href.replace("#", ""));
+                setIsOpen(false);
+              }}
               className={`block px-4 py-3 rounded-lg font-medium transition-colors cursor-pointer ${
                 activeSection === link.href.replace("#", "")
                   ? "bg-primary-100 text-primary-700"

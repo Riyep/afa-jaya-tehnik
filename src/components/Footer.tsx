@@ -35,6 +35,14 @@ export default function Footer() {
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const el = document.getElementById(item.toLowerCase());
+                      if (el) el.scrollIntoView({ behavior: "smooth" });
+                      if (window.location.hash) {
+                        window.history.replaceState(null, "", window.location.pathname);
+                      }
+                    }}
                     className="text-primary-300 hover:text-white transition-colors text-sm cursor-pointer"
                   >
                     {item}
@@ -67,7 +75,15 @@ export default function Footer() {
 
         <div className="border-t border-primary-800 mt-10 pt-6 text-center">
           <p className="text-primary-400 text-sm">
-            © {year} AFA JAYA TEHNIK. Hak cipta dilindungi.
+            © {2023} AFA JAYA TEHNIK. All rights reserved. | {' '}
+            <a
+              href="https://riyep.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-bottom__dev-link"
+            >
+              Riyep-Dev
+            </a>
           </p>
         </div>
       </div>

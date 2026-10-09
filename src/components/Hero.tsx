@@ -78,6 +78,14 @@ export default function Hero() {
           </a>
           <a
             href="#layanan"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("layanan");
+              if (el) el.scrollIntoView({ behavior: "smooth" });
+              if (window.location.hash) {
+                window.history.replaceState(null, "", window.location.pathname);
+              }
+            }}
             className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-xl hover:bg-white/10 transition-all duration-300 cursor-pointer text-lg"
           >
             Lihat Layanan

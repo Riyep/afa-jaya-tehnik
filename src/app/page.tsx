@@ -32,7 +32,35 @@ export default function Home() {
     );
     elements.forEach((el) => observer.observe(el));
 
-    return () => observer.disconnect();
+    // Intercept any anchor click targeting # to keep URL clean without /#
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest("a");
+      if (!target) return;
+      const href = target.getAttribute("href");
+      if (href && href.startsWith("#") && href.length > 1) {
+        e.preventDefault();
+        const id = href.slice(1);
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+        if (window.location.hash) {
+          window.history.replaceState(null, "", window.location.pathname);
+        }
+      }
+    };
+
+    // Clean initial hash if present
+    if (window.location.hash) {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+
+    document.addEventListener("click", handleAnchorClick);
+
+    return () => {
+      observer.disconnect();
+      document.removeEventListener("click", handleAnchorClick);
+    };
   }, []);
 
   return (

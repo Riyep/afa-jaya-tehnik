@@ -80,6 +80,11 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "http://www.afajayatehnik.com",
   },
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   verification: {
     google: "your-google-verification-code",
   },
@@ -93,7 +98,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${montserrat.variable} ${roboto.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
         <meta name="geo.region" content="ID-JI" />
         <meta name="geo.placename" content="Surabaya" />
         <meta name="geo.position" content="-7.2575;112.7521" />
